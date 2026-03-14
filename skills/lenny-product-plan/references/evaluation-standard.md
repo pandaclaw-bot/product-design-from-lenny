@@ -1,11 +1,11 @@
-# Evaluation Layer: Business Plan
+# Evaluation Layer: Product Plan
 
 Use this file to score the business-plan draft before delivery.
 
 ## 1. Purpose
 
 Treat evaluation as a gating step, not a decorative appendix.
-The business plan should be revised internally until it clears the chosen threshold.
+The product plan should be revised internally until it clears the chosen threshold.
 
 ## 2. Default threshold
 
@@ -98,7 +98,7 @@ Core dimensions:
 
 If the draft fails:
 1. identify the weakest 2-3 dimensions
-2. revise the business plan specifically for them
+2. revise the product plan specifically for them
 3. re-score
 4. only deliver once it passes
 

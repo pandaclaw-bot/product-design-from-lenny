@@ -64,7 +64,7 @@ Before finishing, check:
 - is the ICP too broad?
 - is the differentiation real?
 - is AI described as a workflow advantage rather than decoration?
-- can this document become the input to a business plan?
+- can this document become the input to a product plan?
 
 ## Delivery rule
 

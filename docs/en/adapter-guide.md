@@ -18,7 +18,7 @@ Keep the skill folders inside a repo-local path such as:
 
 ```text
 .ai/skills/lenny-product-positioning/
-.ai/skills/lenny-business-plan/
+.ai/skills/lenny-product-plan/
 ```
 
 Then tell the agent to read the relevant skill before planning implementation.

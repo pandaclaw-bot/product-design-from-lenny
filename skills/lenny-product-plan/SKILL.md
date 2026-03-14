@@ -1,16 +1,16 @@
 ---
-name: lenny-business-plan
-description: Turn a product idea or positioning into a commercially coherent business case and plan. Use when the user needs help judging whether an idea can become a business, how it makes money, who pays, what the market opportunity is, how to price it, how to enter the market, how it competes, or what milestones and risks matter most. Trigger even when the user does not explicitly ask for a business plan but is really asking for commercial strategy, GTM logic, pricing, market opportunity framing, competitive analysis, or whether the idea can win as a business.
+name: lenny-product-plan
+description: Turn a product idea or positioning into a structured product plan. Use when the user needs help turning a product direction into a concrete planning document covering market opportunity, who pays, pricing logic, market entry, competition, major risks, and strategic milestones. Trigger even when the user does not explicitly ask for a product plan but is really asking for commercial logic, GTM strategy, pricing, market opportunity framing, competitive analysis, or how to turn a product direction into a viable plan.
 ---
 
-# Lenny Business Plan
+# Lenny Product Plan
 
-Use this skill to convert a product thesis into a commercially coherent business plan.
+Use this skill to convert a product thesis or positioning into a structured product plan focused on product strategy, market opportunity, pricing, GTM, competition, and key risks.
 
 This skill has four internal layers:
 - **Brain**: business logic, GTM principles, pricing logic, defensibility and AI commercialization checks
 - **Hands**: multi-analyst debate and convergence workflow
-- **Output**: professional business-plan generation and review
+- **Output**: professional product-plan generation and review
 - **Evaluation**: score the draft, decide whether it passes, and force revision when needed
 
 ## Read in this order
@@ -45,13 +45,13 @@ Prefer derived insights and method files over raw transcripts.
 
 ### Step 0: Start from a product thesis
 Use the output of `lenny-product-positioning` if available.
-If not available, first do a light positioning pass before writing the business plan.
+If not available, first do a light positioning pass before writing the product plan.
 
 If the user provides multiple candidate ideas, switch to **batch screening mode** first:
 - do a light commercial assessment across all ideas
 - score them comparatively
 - shortlist the strongest candidates
-- only write full business plans for the finalists
+- only write full product plans for the finalists
 
 ### Step 1: Run the internal analysts
 Use five internal lenses:
@@ -81,7 +81,7 @@ Produce:
 - the top three risks
 - the claims that should not be overstated
 
-### Step 4: Write the business plan
+### Step 4: Write the product plan
 Use the structure in `references/output-standard.md`.
 
 ### Step 5: Evaluate before delivery
@@ -92,11 +92,11 @@ Use `references/evaluation-standard.md`.
 - If the user explicitly asks for an external/investor-facing version, default to **8/10**.
 - Score the draft across the required dimensions.
 - If the overall score is below threshold, revise internally and re-evaluate.
-- Do not deliver a final business plan that fails the threshold unless missing inputs make passing impossible. In that case, clearly say what evidence or inputs are missing.
+- Do not deliver a final product plan that fails the threshold unless missing inputs make passing impossible. In that case, clearly say what evidence or inputs are missing.
 
 ## Quality bar
 
-A strong business plan must:
+A strong product plan must:
 - connect value to willingness to pay
 - distinguish user, buyer, and economic decision maker
 - explain the initial GTM wedge

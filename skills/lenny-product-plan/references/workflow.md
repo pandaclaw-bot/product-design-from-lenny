@@ -1,16 +1,16 @@
-# Hands Layer: Business Plan Workflow
+# Hands Layer: Product Plan Workflow
 
 Use this file to run the internal multi-analyst process.
 
 ## Optional pre-step: Batch screening mode
 
-If the user provides multiple candidate ideas, do not draft full business plans for all of them immediately.
+If the user provides multiple candidate ideas, do not draft full product plans for all of them immediately.
 Instead:
 1. create a light commercial brief for each idea
 2. score each on market tension, value logic, commercial model, GTM realism, competition/defensibility, risk honesty, and evidence potential
 3. rank them comparatively
 4. shortlist the top 3-5 ideas
-5. only then draft full business plans for the finalists
+5. only then draft full product plans for the finalists
 
 ## Step 0: Build the commercial brief
 
@@ -74,4 +74,4 @@ Create:
 
 ## Step 5: Hand off to Output layer
 
-Only then draft the final business plan.
+Only then draft the final product plan.

@@ -1,11 +1,11 @@
-# Output Layer: Business Plan Standard
+# Output Layer: Product Plan Standard
 
-Write a polished business-plan document using this structure.
+Write a polished product-plan document using this structure.
 
 ## Required structure
 
 ```md
-# 商业计划书
+# 产品策划书
 
 ## 1. 执行摘要
 

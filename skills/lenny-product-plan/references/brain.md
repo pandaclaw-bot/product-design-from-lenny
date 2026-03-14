@@ -1,16 +1,16 @@
-# Brain Layer: Business Plan
+# Brain Layer: Product Plan
 
 Use this file as the main reasoning base for business-plan work.
 
 ## 1. Business plan definition
 
-A business plan is a commercial logic document, not a long product memo.
+A product plan is a commercial logic document, not a long product memo.
 It must explain why a product can become a business, not merely why it is interesting.
 
 ## 2. Core principles
 
 ### Principle A: Positioning before commercialization
-Without a clear product thesis, the business plan will become generic.
+Without a clear product thesis, the product plan will become generic.
 
 ### Principle B: Market opportunity is about buying tension, not only market size
 Explain why customers will act now.
