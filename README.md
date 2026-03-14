@@ -1,184 +1,230 @@
-# Product Design from Lenny
+# Lenny Product Strategy Skills
 
-一个可复用的产品设计 Skill。它从 Lenny’s Podcast 的高质量产品讨论中提炼而来，并被重新整理成适合 OpenClaw、Claude Code、Codex 等 agent / IDE 工作流使用的公开项目。
+这是一个公开项目，核心内容是两份正式 Skill：
 
-这个项目不只放最终 Skill 成品，也保留了这个 Skill 是如何被构建、收敛、修订和整理成可复用模块的过程。
+- `lenny-product-positioning`
+- `lenny-business-plan`
 
-## 这个项目包含什么
+它们不是从零重新编的 prompt，而是从这几天真实构建、试跑、收敛出来的一套正式方法中整理出来的。
 
-- `SKILL.md`：Skill 主文件
-- `references/`：参考材料与可复用方法笔记
-- `docs/`：设计思路、演化过程、构建方法
-- `examples/`：示例 prompt 与用法
+这个仓库既包含最终 Skill，也包含这两个 Skill 是如何被设计出来、如何收敛边界、如何加入 Evaluation layer、如何从探索版演化成正式版的过程文档。
 
-## 这个 Skill 是做什么的
+## 仓库内容
 
-当你希望 agent 帮你做更结构化的产品规划、功能设计、MVP 范围收敛时，可以使用这个 Skill。
+```text
+.
+├── README.md
+├── skills/
+│   ├── lenny-product-positioning/
+│   └── lenny-business-plan/
+└── docs/
+    └── process-archive/
+```
 
-典型场景包括：
-- 把一个模糊产品想法整理成更清晰的产品方案
-- 为某个功能或工作流做结构化设计
-- 生成适合讨论的产品 proposal
-- 借鉴高质量产品访谈中的方法论，而不是只做泛泛 brainstorming
+### `skills/lenny-product-positioning`
+用于把一个模糊产品想法收敛成清晰定位，包括：
+- ICP
+- 核心问题
+- 替代方案
+- 价值主张
+- category frame
+- wedge / 切口
+- differentiation
+- why now
+- 战略路径
 
-## 这个 Skill 不打算做什么
+### `skills/lenny-business-plan`
+用于把一个产品 thesis / 定位扩展成结构化商业计划书，包括：
+- 市场机会
+- buyer / user / payer 逻辑
+- 商业模式
+- 定价思路
+- GTM
+- 竞争与替代分析
+- 风险与里程碑
 
-这个项目刻意保持边界，不打算变成：
-- 一个包打天下的产品全栈系统
-- 任何场景都通吃的 PRD 生成器
-- 用户研究的替代品
-- 原始 transcript 的资料仓库
+## 这两个 Skill 的关系
+
+推荐顺序：
+
+1. 先用 `lenny-product-positioning`
+2. 再用 `lenny-business-plan`
+
+原因很简单：
+如果定位没有收敛，商业计划书通常会写得很空、很泛、很像模板作文。
+
+## 这套 Skill 的内部结构
+
+两份 Skill 都不是单层 prompt，而是四层结构：
+
+- **Brain**：方法论、判断框架、核心观点
+- **Hands**：多分析镜头的执行与辩论收敛流程
+- **Output**：标准化输出结构与写作要求
+- **Evaluation**：先打分，不达标就回炉，而不是直接交稿
+
+## 为什么这个项目值得公开
+
+这个仓库不只是给别人“拿去用”。
+它也尽量保留了构建过程，让外部读者能看懂：
+
+- 为什么从一堆探索版 skill 收敛成两份正式 skill
+- 为什么不直接把 transcript 原文当 Skill 大脑
+- 为什么要加 Brain / Hands / Output / Evaluation 这几层
+- 为什么要加 batch screening / portfolio mode
+- 为什么要把边界收在“定位 + 商业计划书”，而不是一路滑向 PRD 与实现
 
 ## 下载与安装
 
-### 方式一：直接克隆仓库
+### 方式一：直接克隆
 
 ```bash
-git clone <你的公开仓库地址>
+git clone https://github.com/pandaclaw-bot/product-design-from-lenny.git
 cd product-design-from-lenny
 ```
 
-### 方式二：只复制 Skill 文件
+### 方式二：只复制某一个 Skill
 
-最少需要保留：
+如果你只想用其中一个 Skill，可以只复制对应目录，例如：
 
-- `SKILL.md`
-- `references/`
+- `skills/lenny-product-positioning/`
+- `skills/lenny-business-plan/`
 
-如果你的运行环境支持 Skill 文件夹加载，请保持目录结构不变。
-
-## 如何在 OpenClaw 中使用
+## 在 OpenClaw 中使用
 
 推荐目录结构：
 
 ```text
 skills/
-└── product-design-from-lenny/
+├── lenny-product-positioning/
+│   ├── SKILL.md
+│   └── references/
+└── lenny-business-plan/
     ├── SKILL.md
     └── references/
 ```
 
-你可以把这个项目整个克隆到本地后，再将 `product-design-from-lenny/` 复制或软链接到你的 OpenClaw skills 目录。
+使用方式：
 
-推荐步骤：
-
-1. 克隆这个仓库到本地
-2. 将 Skill 目录复制或软链接到 OpenClaw 的 `skills/` 目录
+1. 将本仓库克隆到本地
+2. 把 `skills/` 下需要的 Skill 目录复制或软链接到 OpenClaw 的技能目录
 3. 如有需要，重启或重新加载 agent 环境
 
-在 OpenClaw 中的典型调用方式：
+示例提示词：
 
 ```text
-使用 product-design-from-lenny skill，把下面这个想法整理成结构化产品方案，重点分析用户、痛点、MVP 范围、工作流、风险和成功指标。
+使用 lenny-product-positioning skill，把下面这个想法整理成清晰的产品定位，重点给出 ICP、价值主张、切入口、差异化和 why now。
+```
+
+```text
+使用 lenny-business-plan skill，基于已有产品定位，输出一份结构化商业计划书，重点分析市场机会、商业模式、定价、GTM、竞争与风险。
 ```
 
 ## 如何适配 Claude Code
 
-Claude Code 不使用 OpenClaw 原生 Skill 打包机制，所以更实用的方式是：把这个项目当作一个可复用的 prompt + reference 模块。
+Claude Code 不走 OpenClaw 原生 Skill 机制，更适合把这两个 Skill 当成 repo-local 的可复用 prompt 模块。
 
-推荐两种方式：
+推荐做法：
 
-### 方式一：作为本地参考目录
-
-- 把这个仓库放在你的项目旁边
-- 在任务开始前，让 Claude Code 先读取 `SKILL.md` 和相关 docs
-
-示例：
+### 方式一：直接读取 SKILL.md
 
 ```text
-Read ./product-design-from-lenny/SKILL.md and use it as the working framework for this task. Then design an MVP for the following product idea...
+Read ./skills/lenny-product-positioning/SKILL.md and follow it for this task.
 ```
 
-### 方式二：作为团队通用 prompt 资产
+或者：
 
-- `SKILL.md` 作为核心指令文件
-- `references/` 作为可选补充阅读
-- `examples/` 作为团队 onboarding 示例
+```text
+Read ./skills/lenny-business-plan/SKILL.md and use it as the working framework.
+```
 
-这样适合把它沉淀成团队内部统一的产品设计工作流。
+### 方式二：把 references 一起带入
 
-## 如何适配 Codex / 其他 IDE Agent
+如果任务更复杂，可以明确要求 agent 连同 references 一起读：
 
-对于 Codex 风格的 coding agent，最适合把这个项目当成 repo-local 的工作流模块。
+```text
+Read ./skills/lenny-product-positioning/SKILL.md and its references before producing the final positioning document.
+```
 
-推荐方式：
+## 如何适配 Codex / Cursor / Windsurf / 其他 IDE Agent
 
-### 方式一：放到仓库内部
+这套仓库适合用作一个 repo-local 的策略技能模块。
+
+推荐放法：
 
 ```text
 .ai/
   skills/
-    product-design-from-lenny/
+    lenny-product-positioning/
+    lenny-business-plan/
 ```
 
-然后这样提示 agent：
+然后提示 agent：
 
 ```text
-Read ./.ai/skills/product-design-from-lenny/SKILL.md and use that framework to design the product plan before writing implementation tasks.
+Read ./.ai/skills/lenny-product-positioning/SKILL.md first. Use it to converge the product thesis before proposing implementation.
 ```
 
-### 方式二：指令层 / 方法层 / 示例层拆开
-
-- `SKILL.md` = 操作指令
-- `docs/` = 设计 rationale 与构建思路
-- `references/` = 更深的方法笔记
-- `examples/` = few-shot 示例
-
-这种结构适合 Codex、Claude Code、Cursor、Windsurf 等文件驱动的 agent 环境。
-
-## 为什么它能跨环境复用
-
-这个项目之所以适合在不同 agent 环境中复用，是因为它把内容拆成了几层：
-
-- 可复用的指令层
-- 方法与设计思路层
-- 示例层
-
-这意味着你可以：
-- 在支持 Skill 文件夹的环境里把它当成原生 Skill 使用
-- 在不支持原生 Skill 的环境里把它当成 prompt framework 使用
-- 在团队内部把它当作一个通用产品设计模块使用
-
-## 建议的公开仓库结构
+或：
 
 ```text
-product-design-from-lenny/
-├── README.md
-├── SKILL.md
-├── docs/
-├── references/
-└── examples/
+Read ./.ai/skills/lenny-business-plan/SKILL.md first. Use it to evaluate whether this idea can become a business before drafting execution plans.
 ```
 
-## 如果你想看这个 Skill 是怎么构建出来的
+## 当你给一个产品想法时，这个 Skill 会怎么跑
 
-建议从这些文档开始：
+### `lenny-product-positioning`
+大致执行顺序是：
 
-- `docs/01-project-overview.md`
-- `docs/02-how-the-skill-was-built.md`
-- `docs/03-design-evolution.md`
-- `docs/04-public-repo-boundary.md`
+1. 标准化输入 brief
+2. 收敛目标用户与核心场景
+3. 分析问题强度与替代方案
+4. 提炼价值主张与 category frame
+5. 生成主定位与备选定位
+6. 输出结构化定位文档
+7. 按 evaluation 标准打分
+8. 不达标则内部修订后再交付
 
-如果你想看更细的过程记录，可以继续看：
+### `lenny-business-plan`
+大致执行顺序是：
 
-- `docs/process-archive/`
+1. 接收已有定位或先做轻量定位收敛
+2. 分析市场机会与 buyer / user / payer 逻辑
+3. 推导商业模式、定价、GTM 和竞争逻辑
+4. 生成主商业路径与备选路径
+5. 输出结构化商业计划书
+6. 按 evaluation 标准打分
+7. 不达标则内部修订后再交付
 
-## 发布前检查清单
+## 过程文档
 
-在把它长期公开分享之前，建议确认：
+如果你不只是想直接使用，而是想看这两个 Skill 是怎么被构建出来的，请看：
 
-- 没有混入私有客户材料
-- 没有混入个人 workspace 文件
-- 没有混入大文件或原始数据文件
-- 示例内容适合公开
-- README 与最终目录结构一致
+- `docs/process-archive/03-new-skill-blueprint-v1.md`
+- `docs/process-archive/04-three-layer-skill-architecture-v2.md`
+- `docs/process-archive/06-v1-refinement-notes.md`
+- `docs/process-archive/07-official-skill-usage-guide-v1.md`
+- `docs/process-archive/08-shareable-summary-v1.md`
+- `docs/process-archive/09-build-retrospective.md`
+
+## 开源边界
+
+本仓库只保留：
+- 两份正式 Skill
+- 它们的 references
+- 可公开的过程文档
+
+不保留：
+- 旧探索版 skill
+- 私有 workspace 文件
+- 个人 memory 文件
+- 客户或业务敏感材料
+- 与这两个正式 Skill 无关的其他项目
 
 ## 当前状态
 
-这是从一个更大的私有工作仓库中整理出来的公开项目版本。
-后续还可以继续补：
+这是一个已可用的公开版本，但还可以继续增强：
 
-- 更正式的 README 结构
-- LICENSE
-- 更完整的示例
-- 更清晰的版本记录
+- 更完整的 examples
+- 更标准的 license
+- 更丰富的英文化说明
+- 更系统的案例展示
