@@ -5,7 +5,7 @@ Write a polished positioning document using this structure.
 ## Required structure
 
 ```md
-# 产品定位说明
+# 产品定位研讨
 
 ## 1. 一句话定位
 
