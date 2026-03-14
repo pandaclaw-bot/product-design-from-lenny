@@ -48,6 +48,28 @@ Write a polished positioning document using this structure.
 - 为什么放弃
 
 ## 11. 保留假设与待验证问题
+
+## 12. 评估摘要
+- 综合分
+- 阈值
+- 结论
+- 最弱项
+- 适用性
+
+### 维度评分
+- ICP 清晰度：x/10 — 原因
+- 问题尖锐度：x/10 — 原因
+- 替代方案认知：x/10 — 原因
+- 品类框架质量：x/10 — 原因
+- 差异化质量：x/10 — 原因
+- why-now 强度：x/10 — 原因
+- 叙事压缩度：x/10 — 原因
+- 战略一致性：x/10 — 原因
+
+### 修改建议
+- 建议 1
+- 建议 2
+- 建议 3
 ```
 
 ## Writing rules
@@ -76,8 +98,12 @@ Preferred delivery behavior:
 - if working inside a repository or document workspace, write it to a file in an appropriate project folder
 - use the chat reply to summarize what was generated, not to replace the artifact itself
 
-Add a short evaluation summary after the main document:
-- evaluation score
+The evaluation summary is mandatory.
+Do not deliver only a total score.
+Always include:
+- overall score
 - threshold used
+- pass / conditional fail / fail
 - weakest remaining area
-- suitability: internal strategy / external packaging
+- dimension-by-dimension score with one-line reasoning
+- 2-3 concrete revision suggestions

@@ -46,6 +46,31 @@ Write a polished product-plan document using this structure.
 ## 11. 当前结论
 - 主商业路径
 - 备选路径
+
+## 12. 评估摘要
+- 综合分
+- 阈值
+- 评估模式
+- 结论
+- 最弱项
+- 适用性
+
+### 维度评分
+- 问题与市场张力：x/10 — 原因
+- 产品价值逻辑：x/10 — 原因
+- 商业模式质量：x/10 — 原因
+- GTM 现实性：x/10 — 原因
+- 定价合理性：x/10 — 原因
+- 竞争与防御性：x/10 — 原因
+- 风险诚实度：x/10 — 原因
+- 证据水平：x/10 — 原因
+- 团队 / 创始人可信度：x/10 — 原因（如适用）
+- 财务合理性：x/10 — 原因（如适用）
+
+### 修改建议
+- 建议 1
+- 建议 2
+- 建议 3
 ```
 
 ## Writing rules
@@ -76,9 +101,13 @@ Preferred delivery behavior:
 - if working inside a repository or document workspace, write it to a file in an appropriate project folder
 - use the chat reply to summarize what was generated, not to replace the artifact itself
 
-Add a short evaluation summary after the main document:
-- evaluation mode
-- evaluation score
+The evaluation summary is mandatory.
+Do not deliver only a total score.
+Always include:
+- overall score
 - threshold used
+- evaluation mode used
+- pass / conditional fail / fail
 - weakest remaining area
-- suitability: internal strategy / external packaging / not ready
+- dimension-by-dimension score with one-line reasoning
+- 2-3 concrete revision suggestions
