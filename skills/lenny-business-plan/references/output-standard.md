@@ -68,6 +68,14 @@ Before finishing, check:
 
 ## Delivery rule
 
+Default to a stable deliverable, not a chat-only answer.
+When the user explicitly asks to use this skill, treat the output as a final artifact unless they clearly ask for draft-only or chat-only mode.
+
+Preferred delivery behavior:
+- produce the full document in final form
+- if working inside a repository or document workspace, write it to a file in an appropriate project folder
+- use the chat reply to summarize what was generated, not to replace the artifact itself
+
 Add a short evaluation summary after the main document:
 - evaluation mode
 - evaluation score
