@@ -1,6 +1,6 @@
 ---
 name: lenny-business-plan
-description: Turn a product thesis or positioning into a structured business plan. Use whenever the user wants a business plan, commercial strategy, GTM plan, pricing logic, market opportunity framing, competitive analysis, milestone plan, or a sober assessment of whether a product idea can become a business. Trigger even if the user does not say "business plan" explicitly but is asking how this idea makes money, how it enters the market, who pays, how to price it, or why it can win.
+description: Turn a product idea or positioning into a commercially coherent business case and plan. Use when the user needs help judging whether an idea can become a business, how it makes money, who pays, what the market opportunity is, how to price it, how to enter the market, how it competes, or what milestones and risks matter most. Trigger even when the user does not explicitly ask for a business plan but is really asking for commercial strategy, GTM logic, pricing, market opportunity framing, competitive analysis, or whether the idea can win as a business.
 ---
 
 # Lenny Business Plan

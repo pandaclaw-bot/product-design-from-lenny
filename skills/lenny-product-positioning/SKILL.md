@@ -1,6 +1,6 @@
 ---
 name: lenny-product-positioning
-description: Turn a rough product idea into a clear product positioning. Use whenever the user needs help defining a product's positioning, ICP, value proposition, category frame, wedge, differentiation, why-now logic, or strategic narrative. Trigger even when the user does not explicitly say "positioning" but is asking what to build, who it is for, how to describe it, what the initial wedge should be, or how an AI product should be framed.
+description: Clarify a product idea into a sharp strategy and positioning. Use when the user needs help deciding what to build, who it is for, which problem matters most, how to frame the product, what the initial wedge should be, how it differs from alternatives, or how an AI product should be positioned. Trigger even when the user does not explicitly ask for positioning but is really asking for product direction, target users, value proposition, differentiation, category framing, why-now logic, or a clearer product narrative.
 ---
 
 # Lenny Product Positioning
