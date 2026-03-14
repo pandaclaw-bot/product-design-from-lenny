@@ -29,7 +29,7 @@ Write a polished product-plan document using this structure.
 - 收费单位
 - 价格结构逻辑
 
-## 7. GTM 策略
+## 7. GTM（Go-To-Market，市场进入）策略
 - 第一批客户
 - 信任机制
 - 激活点
@@ -79,6 +79,7 @@ Write a polished product-plan document using this structure.
 - Make commercial logic explicit.
 - Keep claims tied to assumptions and evidence.
 - Use professional, compact language.
+- When using abbreviations such as GTM, spell out the full term on first mention and, when helpful, include a Chinese explanation.
 
 ## Review checklist
 

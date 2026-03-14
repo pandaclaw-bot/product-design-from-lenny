@@ -9,7 +9,7 @@ Write a polished positioning document using this structure.
 
 ## 1. 一句话定位
 
-## 2. 目标客户（ICP）
+## 2. 目标客户（ICP，Ideal Customer Profile）
 - 组织类型
 - 关键角色
 - 为什么他们是第一批用户
@@ -78,6 +78,7 @@ Write a polished positioning document using this structure.
 - Avoid buzzword-heavy writing.
 - Prefer concrete market language over abstract optimism.
 - Keep the one-line positioning short enough to retell.
+- When using abbreviations such as ICP, spell out the full term on first mention and, when helpful, include a Chinese explanation.
 
 ## Review checklist
 
