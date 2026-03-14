@@ -1,57 +1,55 @@
 # Product Design from Lenny
 
-A reusable product-design skill distilled from Lenny’s Podcast product conversations and rebuilt for agent workflows.
+一个可复用的产品设计 Skill。它从 Lenny’s Podcast 的高质量产品讨论中提炼而来，并被重新整理成适合 OpenClaw、Claude Code、Codex 等 agent / IDE 工作流使用的公开项目。
 
-This project is not only the final skill. It also documents how the skill was designed, narrowed, revised, and made usable in real-world agent setups.
+这个项目不只放最终 Skill 成品，也保留了这个 Skill 是如何被构建、收敛、修订和整理成可复用模块的过程。
 
-## What this project includes
+## 这个项目包含什么
 
-- `SKILL.md`: the public skill itself
-- `references/`: source references and reusable method notes
-- `docs/`: design rationale, evolution, and build process
-- `examples/`: example prompts and usage patterns
+- `SKILL.md`：Skill 主文件
+- `references/`：参考材料与可复用方法笔记
+- `docs/`：设计思路、演化过程、构建方法
+- `examples/`：示例 prompt 与用法
 
-## What this skill does
+## 这个 Skill 是做什么的
 
-Use this skill when you want an agent to help with product planning and feature design using a structured lens inspired by top product leaders.
+当你希望 agent 帮你做更结构化的产品规划、功能设计、MVP 范围收敛时，可以使用这个 Skill。
 
-Typical use cases:
-- turn a rough idea into a clearer product concept
-- design an MVP or a feature scope
-- structure a product proposal for discussion
-- borrow product-design heuristics from high-signal interviews and operator thinking
+典型场景包括：
+- 把一个模糊产品想法整理成更清晰的产品方案
+- 为某个功能或工作流做结构化设计
+- 生成适合讨论的产品 proposal
+- 借鉴高质量产品访谈中的方法论，而不是只做泛泛 brainstorming
 
-## What this skill does not try to do
+## 这个 Skill 不打算做什么
 
-This project is intentionally narrow.
+这个项目刻意保持边界，不打算变成：
+- 一个包打天下的产品全栈系统
+- 任何场景都通吃的 PRD 生成器
+- 用户研究的替代品
+- 原始 transcript 的资料仓库
 
-It does not aim to be:
-- a full product operating system
-- a complete PRD generator for every situation
-- a replacement for direct user research
-- a source-of-truth transcript archive
+## 下载与安装
 
-## Download and install
-
-### Option A: Clone the repo
+### 方式一：直接克隆仓库
 
 ```bash
-git clone <your-public-repo-url>
+git clone <你的公开仓库地址>
 cd product-design-from-lenny
 ```
 
-### Option B: Copy only the skill files
+### 方式二：只复制 Skill 文件
 
-At minimum, copy these into your own workspace:
+最少需要保留：
 
 - `SKILL.md`
 - `references/`
 
-If your environment supports skill packages, keep the folder structure intact.
+如果你的运行环境支持 Skill 文件夹加载，请保持目录结构不变。
 
-## Install in OpenClaw
+## 如何在 OpenClaw 中使用
 
-Recommended layout:
+推荐目录结构：
 
 ```text
 skills/
@@ -60,54 +58,52 @@ skills/
     └── references/
 ```
 
-Then place this project folder under your OpenClaw skill workspace or copy it into your existing `skills/` directory.
+你可以把这个项目整个克隆到本地后，再将 `product-design-from-lenny/` 复制或软链接到你的 OpenClaw skills 目录。
 
-If you keep it as a standalone repo, the easiest pattern is:
+推荐步骤：
 
-1. clone this repo locally
-2. copy or symlink `product-design-from-lenny/` into your OpenClaw skills directory
-3. restart or reload your agent environment if needed
+1. 克隆这个仓库到本地
+2. 将 Skill 目录复制或软链接到 OpenClaw 的 `skills/` 目录
+3. 如有需要，重启或重新加载 agent 环境
 
-Suggested usage prompt in OpenClaw:
+在 OpenClaw 中的典型调用方式：
 
 ```text
-Use the product-design-from-lenny skill to turn this idea into a structured product proposal. Focus on users, pain points, MVP scope, workflow, risks, and success metrics.
+使用 product-design-from-lenny skill，把下面这个想法整理成结构化产品方案，重点分析用户、痛点、MVP 范围、工作流、风险和成功指标。
 ```
 
-## Adapt for Claude Code
+## 如何适配 Claude Code
 
-Claude Code does not use OpenClaw-native skill packaging, so the practical approach is to use this project as a reusable prompt-and-reference module.
+Claude Code 不使用 OpenClaw 原生 Skill 打包机制，所以更实用的方式是：把这个项目当作一个可复用的 prompt + reference 模块。
 
-Recommended patterns:
+推荐两种方式：
 
-### Pattern 1: Keep as a local reference folder
+### 方式一：作为本地参考目录
 
-- put this repo next to your product project
-- ask Claude Code to read `SKILL.md` and the relevant docs before drafting
+- 把这个仓库放在你的项目旁边
+- 在任务开始前，让 Claude Code 先读取 `SKILL.md` 和相关 docs
 
-Example:
+示例：
 
 ```text
 Read ./product-design-from-lenny/SKILL.md and use it as the working framework for this task. Then design an MVP for the following product idea...
 ```
 
-### Pattern 2: Convert into a team prompt asset
+### 方式二：作为团队通用 prompt 资产
 
-- keep `SKILL.md` as the core instruction file
-- keep `references/` as optional reading
-- keep `examples/` as onboarding examples
+- `SKILL.md` 作为核心指令文件
+- `references/` 作为可选补充阅读
+- `examples/` 作为团队 onboarding 示例
 
-This works well when your team wants a repeatable product-design prompt standard.
+这样适合把它沉淀成团队内部统一的产品设计工作流。
 
-## Adapt for Codex and other IDE agents
+## 如何适配 Codex / 其他 IDE Agent
 
-For Codex-style coding agents, this repo works best as a checked-in workflow module.
+对于 Codex 风格的 coding agent，最适合把这个项目当成 repo-local 的工作流模块。
 
-Recommended patterns:
+推荐方式：
 
-### Pattern 1: Repo-local skill folder
-
-Place the folder in your repo:
+### 方式一：放到仓库内部
 
 ```text
 .ai/
@@ -115,35 +111,35 @@ Place the folder in your repo:
     product-design-from-lenny/
 ```
 
-Then prompt the agent:
+然后这样提示 agent：
 
 ```text
 Read ./.ai/skills/product-design-from-lenny/SKILL.md and use that framework to design the product plan before writing implementation tasks.
 ```
 
-### Pattern 2: Prompt + references split
+### 方式二：指令层 / 方法层 / 示例层拆开
 
-- `SKILL.md` = operating instruction
-- `docs/` = design rationale and build philosophy
-- `references/` = deeper reusable notes
-- `examples/` = few-shot guidance
+- `SKILL.md` = 操作指令
+- `docs/` = 设计 rationale 与构建思路
+- `references/` = 更深的方法笔记
+- `examples/` = few-shot 示例
 
-This split works well in Codex, Claude Code, Cursor, Windsurf, and similar IDE agents.
+这种结构适合 Codex、Claude Code、Cursor、Windsurf 等文件驱动的 agent 环境。
 
-## Compatibility guidance
+## 为什么它能跨环境复用
 
-This project is designed to be portable across agent environments because it separates:
+这个项目之所以适合在不同 agent 环境中复用，是因为它把内容拆成了几层：
 
-- the reusable instruction layer
-- the method/rationale layer
-- the examples layer
+- 可复用的指令层
+- 方法与设计思路层
+- 示例层
 
-That means you can:
-- use it natively as a skill in environments that support skill folders
-- use it as a prompt framework in environments that do not
-- embed it into internal team workflows as a reusable product-design module
+这意味着你可以：
+- 在支持 Skill 文件夹的环境里把它当成原生 Skill 使用
+- 在不支持原生 Skill 的环境里把它当成 prompt framework 使用
+- 在团队内部把它当作一个通用产品设计模块使用
 
-## Suggested repo structure for sharing
+## 建议的公开仓库结构
 
 ```text
 product-design-from-lenny/
@@ -154,26 +150,35 @@ product-design-from-lenny/
 └── examples/
 ```
 
-## How this skill was built
+## 如果你想看这个 Skill 是怎么构建出来的
 
-If you want the construction process instead of just the artifact, start here:
+建议从这些文档开始：
 
 - `docs/01-project-overview.md`
 - `docs/02-how-the-skill-was-built.md`
 - `docs/03-design-evolution.md`
 - `docs/04-public-repo-boundary.md`
 
-## Publishing checklist
+如果你想看更细的过程记录，可以继续看：
 
-Before pushing this as a public repo, verify:
+- `docs/process-archive/`
 
-- no private client material is included
-- no personal workspace files are included
-- no large data files are included
-- examples are safe to share
-- the README matches the final folder structure
+## 发布前检查清单
 
-## Status
+在把它长期公开分享之前，建议确认：
 
-Prepared as a public-project version from a larger working repository.
-Further cleanup, examples, and license selection can be added before final publication.
+- 没有混入私有客户材料
+- 没有混入个人 workspace 文件
+- 没有混入大文件或原始数据文件
+- 示例内容适合公开
+- README 与最终目录结构一致
+
+## 当前状态
+
+这是从一个更大的私有工作仓库中整理出来的公开项目版本。
+后续还可以继续补：
+
+- 更正式的 README 结构
+- LICENSE
+- 更完整的示例
+- 更清晰的版本记录
