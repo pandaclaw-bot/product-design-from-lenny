@@ -67,10 +67,6 @@ Write a polished product-plan document using this structure.
 - 团队 / 创始人可信度：x/10 — 原因（如适用）
 - 财务合理性：x/10 — 原因（如适用）
 
-### 修改建议
-- 建议 1
-- 建议 2
-- 建议 3
 ```
 
 ## Writing rules
@@ -111,4 +107,3 @@ Always include:
 - pass / conditional fail / fail
 - weakest remaining area
 - dimension-by-dimension score with one-line reasoning
-- 2-3 concrete revision suggestions

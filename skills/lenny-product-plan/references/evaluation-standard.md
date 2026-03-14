@@ -343,10 +343,6 @@ Also include a compact score breakdown in this form:
 - 风险诚实度：8/10 — 风险识别较真实
 - 证据水平：6/10 — 仍缺更多客户与采购验证
 
-### 修改建议
-- 收紧第一批客户定义
-- 补 buyer / payer 决策链路
-- 明确首批渠道为什么可复制
 ```
 
 ## 10. Usage note

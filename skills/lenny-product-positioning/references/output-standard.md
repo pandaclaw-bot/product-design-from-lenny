@@ -66,10 +66,6 @@ Write a polished positioning document using this structure.
 - 叙事压缩度：x/10 — 原因
 - 战略一致性：x/10 — 原因
 
-### 修改建议
-- 建议 1
-- 建议 2
-- 建议 3
 ```
 
 ## Writing rules
@@ -107,4 +103,3 @@ Always include:
 - pass / conditional fail / fail
 - weakest remaining area
 - dimension-by-dimension score with one-line reasoning
-- 2-3 concrete revision suggestions

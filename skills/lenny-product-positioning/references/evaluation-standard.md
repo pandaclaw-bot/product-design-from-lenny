@@ -277,10 +277,6 @@ Also include a compact score breakdown in this form:
 - 叙事压缩度：7/10 — 一句话可复述，但记忆点还可更强
 - 战略一致性：8/10 — 主线基本连贯
 
-### 修改建议
-- 优先补强首批客户切口
-- 把切换理由写得更像真实采购理由
-- 收紧 one-liner 的长度和记忆点
 ```
 
 ## 8. Usage note
